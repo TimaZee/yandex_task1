@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Табло аэропорта</title>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/myScript.js"></script>
+</head>
+
+<body>
+
+	<div id="wrapper">
+		<form method='get'>
+			<p><label>Вылет</label>
+				<input type="checkbox" value="1" name="departure" id="departure">
+			</p>
+			<p><label>Прилет</label>
+				<input type="checkbox" value="2" name="landing" id="landing">
+			</p>
+		</form>
+		<h2 class="toppanel" id="onthetop">Расписание рейсов аэропорта</h2>
+		<div class="container">
+		<table>	
+			<thead>
+				<tr>
+				   <th>Тип рейса</th>
+				   <th>Номер рейса</th>
+				   <th>Авиакампания</th>
+				   <th>Логотип</th>
+				   <th>Тип воздушного судна</th>
+				   <th>Аэропорт назначения</th>
+				   <th>Плановое время вылета</th>
+				   <th>Плановое время прилета</th>
+				   <th>Статус рейса</th>
+				   <th>Примечания</th>
+				</tr>
+			<thead>
+			<tbody> 	
+				<tr>
+				   <td><img src="images/air.png" alt="Вылет" class="dep" title="Вылет" width="20px"></td>
+				   <td>SU 2462</td>
+				   <td>Аэрофлот </td>
+				   <td><img src="images/aeroflot.jpg" alt="Аэрофлот" title="Аэрофлот" width="40px"></td>
+				   <td>Airbus А321</td>
+				   <td>Париж</td>
+				   <td>11:45</td>
+				   <td>14:05</td>
+				   <td>Вылетел</td>
+				   <td>-</td>
+				</tr>
+				<tr>
+				   <td><img src="images/landing.png" alt="Приземление" class="lan" title="Приземление" width="20px"></td>
+				   <td>DL 1011</td>
+				   <td>Уральские авиалинии</td>
+				   <td><img src="images/ural.jpg" alt="Уральские авиалинии" title="Уральские авиалинии" width="40px"></td>
+				   <td>Boeing 777-300</td>
+				   <td>Шереметьево</td>
+				   <td>11:25</td>
+				   <td>23:10</td>
+				   <td>Отменен</td>
+				   <td>Погодные условия</td>
+				</tr>
+				<tr>
+				   <td><img src="images/landing.png" alt="Приземление" class="lan" title="Приземление" width="20px"></td>
+				   <td>SU 1255</td>
+				   <td>S7</td>
+				   <td><img src="images/s7.jpg" alt="S7" title="S7" width="40px"></td>
+				   <td>Airbus А320</td>
+				   <td>Шереметьево</td>
+				   <td>9:45</td>
+				   <td>13:05</td>
+				   <td>Приземлился</td>
+				   <td>-</td>
+				</tr>
+				<tr>
+				   <td><img src="images/air.png" alt="Вылет" class="dep" title="Вылет" width="20px"></td>
+				   <td>SU 2563</td>
+				   <td>Аэрофлот</td>
+				   <td><img src="images/aeroflot.jpg" alt="Аэрофлот" title="Аэрофлот" width="40px"></td>
+				   <td>Airbus А321</td>
+				   <td>Симферополь</td>
+				   <td>12:45</td>
+				   <td>15:05</td>
+				   <td>Задержан до 15:35</td>
+				   <td>Технические неполадки</td>
+				</tr>
+				<tr>
+				   <td><img src="images/landing.png" alt="Приземление" class="lan" title="Приземление" width="20px"></td>
+				   <td>SU 2355</td>
+				   <td>Аэрофлот </td>
+				   <td><img src="images/aeroflot.jpg" alt="Аэрофлот" title="Аэрофлот" width="40px"></td>
+				   <td>Airbus А330</td>
+				   <td>Шереметьево</td>
+				   <td>12:15</td>
+				   <td>14:55</td>
+				   <td>По расписанию</td>
+				   <td>-</td>
+				</tr>
+				<tr>
+				   <td><img src="images/air.png" alt="Вылет" class="dep" title="Вылет" width="20px"></td>
+				   <td>SU 2722</td>
+				   <td>Аэрофлот </td>
+				   <td><img src="images/aeroflot.jpg" alt="Аэрофлот" title="Аэрофлот" width="40px"></td>
+				   <td>Airbus А321</td>
+				   <td>Венеция</td>
+				   <td>11:45</td>
+				   <td>14:55</td>
+				   <td>Вылетел</td>
+				   <td>-</td>
+				</tr>
+				<tr>
+				   <td><img src="images/landing.png" alt="Приземление" class="lan" title="Приземление" width="20px"></td>
+				   <td>DL 1016</td>
+				   <td>Уральские авиалинии</td>
+				   <td><img src="images/ural.jpg" alt="Уральские авиалинии" title="Уральские авиалинии" width="40px"></td>
+				   <td>Boeing 777-300</td>
+				   <td>Шереметьево</td>
+				   <td>11:25</td>
+				   <td>23:10</td>
+				   <td>Отменен</td>
+				   <td>Погодные условия</td>
+				</tr>
+				<tr>
+				   <td><img src="images/landing.png" alt="Приземление" class="lan" title="Приземление" width="20px"></td>
+				   <td>SU 1255</td>
+				   <td>S7</td>
+				   <td><img src="images/s7.jpg" alt="S7" title="S7" width="40px"></td>
+				   <td>Airbus А320</td>
+				   <td>Шереметьево</td>
+				   <td>9:45</td>
+				   <td>13:05</td>
+				   <td>Приземлился</td>
+				   <td>-</td>
+				</tr>
+				<tr>
+				   <td><img src="images/air.png" alt="Вылет" class="dep" title="Вылет" width="20px"></td>
+				   <td>SU 2563</td>
+				   <td>Аэрофлот</td>
+				   <td><img src="images/aeroflot.jpg" alt="Аэрофлот" title="Аэрофлот" width="40px"></td>
+				   <td>Airbus А321</td>
+				   <td>Симферополь</td>
+				   <td>12:55</td>
+				   <td>15:10</td>
+				   <td>Ожидание посадки</td>
+				   <td>Технические неполадки</td>
+				</tr>
+				<tr>
+				   <td><img src="images/landing.png" alt="Приземление" class="lan" title="Приземление" width="20px"></td>
+				   <td>SU 2355</td>
+				   <td>Аэрофлот </td>
+				   <td><img src="images/aeroflot.jpg" alt="Аэрофлот" title="Аэрофлот" width="40px"></td>
+				   <td>Airbus А330</td>
+				   <td>Шереметьево</td>
+				   <td>12:15</td>
+				   <td>14:55</td>
+				   <td>По расписанию</td>
+				   <td>-</td>
+				</tr>
+				<tr>
+				   <td><img src="images/air.png" alt="Вылет" class="dep" title="Вылет" width="20px"></td>
+				   <td>SU 2966</td>
+				   <td>Аэрофлот </td>
+				   <td><img src="images/aeroflot.jpg" alt="Аэрофлот" title="Аэрофлот" width="40px"></td>
+				   <td>Airbus А321</td>
+				   <td>Париж</td>
+				   <td>11:55</td>
+				   <td>14:15</td>
+				   <td>Вылетел</td>
+				   <td>-</td>
+				</tr>
+				<tr>
+				   <td><img src="images/landing.png" alt="Приземление" class="lan" title="Приземление" width="20px"></td>
+				   <td>DL 1611</td>
+				   <td>Уральские авиалинии</td>
+				   <td><img src="images/ural.jpg" alt="Уральские авиалинии" title="Уральские авиалинии" width="40px"></td>
+				   <td>Boeing 777-300</td>
+				   <td>Шереметьево</td>
+				   <td>11:25</td>
+				   <td>23:10</td>
+				   <td>Отменен</td>
+				   <td>Погодные условия</td>
+				</tr>
+				<tr>
+				   <td><img src="images/landing.png" alt="Приземление" class="lan" title="Приземление" width="20px"></td>
+				   <td>SU 1025</td>
+				   <td>S7</td>
+				   <td><img src="images/s7.jpg" alt="S7" title="S7" width="40px"></td>
+				   <td>Airbus А320</td>
+				   <td>Шереметьево</td>
+				   <td>9:45</td>
+				   <td>13:05</td>
+				   <td>Приземлился</td>
+				   <td>-</td>
+				</tr>
+				<tr>
+				   <td><img src="images/air.png" alt="Вылет" class="dep" title="Вылет" width="20px"></td>
+				   <td>SU 2560</td>
+				   <td>Аэрофлот</td>
+				   <td><img src="images/aeroflot.jpg" alt="Аэрофлот" title="Аэрофлот" width="40px"></td>
+				   <td>Airbus А321</td>
+				   <td>Сочи</td>
+				   <td>12:45</td>
+				   <td>15:45</td>
+				   <td>Задержан до 13:15</td>
+				   <td>Технические неполадки</td>
+				</tr>
+				<tr>
+				   <td><img src="images/landing.png" alt="Приземление" class="lan" title="Приземление" width="20px"></td>
+				   <td>SU 2355</td>
+				   <td>Аэрофлот </td>
+				   <td><img src="images/aeroflot.jpg" alt="Аэрофлот" title="Аэрофлот" width="40px"></td>
+				   <td>Airbus А330</td>
+				   <td>Шереметьево</td>
+				   <td>12:15</td>
+				   <td>14:55</td>
+				   <td>По расписанию</td>
+				   <td>-</td>
+				</tr>
+				<tr>
+				   <td><img src="images/air.png" alt="Вылет" class="dep" title="Вылет" width="20px"></td>
+				   <td>SU 2477</td>
+				   <td>Аэрофлот </td>
+				   <td><img src="images/aeroflot.jpg" alt="Аэрофлот" title="Аэрофлот" width="40px"></td>
+				   <td>Airbus А321</td>
+				   <td>Лондон</td>
+				   <td>11:35</td>
+				   <td>14:25</td>
+				   <td>Регистрация на рейс</td>
+				   <td>-</td>
+				</tr>
+				<tr>
+				   <td><img src="images/landing.png" alt="Приземление" class="lan" title="Приземление" width="20px"></td>
+				   <td>SU 2140</td>
+				   <td>Аэрофлот </td>
+				   <td><img src="images/aeroflot.jpg" alt="Аэрофлот" title="Аэрофлот" width="40px"></td>
+				   <td>Airbus А320</td>
+				   <td>Шереметьево</td>
+				   <td>12:15</td>
+				   <td>14:55</td>
+				   <td>По расписанию</td>
+				   <td>-</td>
+				</tr>
+				<tr>
+				   <td><img src="images/landing.png" alt="Приземление" class="lan" title="Приземление" width="20px"></td>
+				   <td>SU 1555</td>
+				   <td>S7</td>
+				   <td><img src="images/s7.jpg" alt="S7" title="S7" width="40px"></td>
+				   <td>Airbus А320</td>
+				   <td>Шереметьево</td>
+				   <td>9:45</td>
+				   <td>13:05</td>
+				   <td>Приземлился</td>
+				   <td>-</td>
+				</tr>
+				<tr>
+				   <td><img src="images/landing.png" alt="Приземление" class="lan" title="Приземление" width="20px"></td>
+				   <td>SU 1310</td>
+				   <td>S7</td>
+				   <td><img src="images/s7.jpg" alt="S7" title="S7" width="40px"></td>
+				   <td>Airbus А321</td>
+				   <td>Краснодар</td>
+				   <td>13:45</td>
+				   <td>16:05</td>
+				   <td>Задержан до 14:35</td>
+				   <td>Технические неполадки</td>
+				</tr>
+				<tr>
+				   <td><img src="images/landing.png" alt="Приземление" class="lan" title="Приземление" width="20px"></td>
+				   <td>SU 2765</td>
+				   <td>Аэрофлот </td>
+				   <td><img src="images/aeroflot.jpg" alt="Аэрофлот" title="Аэрофлот" width="40px"></td>
+				   <td>Airbus А330</td>
+				   <td>Шереметьево</td>
+				   <td>12:15</td>
+				   <td>14:55</td>
+				   <td>По расписанию</td>
+				   <td>-</td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+	</div>
+	
+</body>
+</html>
